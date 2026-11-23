@@ -1,0 +1,19 @@
+{
+  "name": "leon-repair-shop",
+  "version": "1.0.0",
+  "description": "Leon Repair Shop website — static, WhatsApp-first",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "images": "node scripts/images.js",
+    "serve": "node scripts/serve.js",
+    "dev": "node scripts/build.js && node scripts/serve.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "sharp": "^0.33.5"
+  },
+  "private": true
+}
