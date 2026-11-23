@@ -84,8 +84,14 @@ All in `src/config.js`:
 ## Hosting and deployment
 
 **Live now on Vercel:** https://leon-repair-shop.vercel.app (project `leon-repair-shop`).
-To publish changes: `npm run build`, then `npx vercel@latest deploy --prod --yes` in this folder. `vercel.json` tells Vercel to serve the ready-built `dist` folder, and `.vercelignore` uploads only that.
-When the domain is connected in Vercel (Project → Settings → Domains), change `siteUrl` in `src/config.js` back to it and redeploy.
+**Code on GitHub:** https://github.com/fmukole/leonrepairshop (private).
+
+To publish changes:
+1. `npm run build` and check it with `npm run dev`.
+2. `git add -A`, `git commit -m "what changed"`, `git push` to save the code on GitHub.
+3. `npx vercel@latest deploy --prod --yes` in this folder. Vercel runs `node scripts/build.js` itself (no packages to install), as set in `vercel.json`.
+
+When the domain is connected in Vercel (Project → Settings → Domains), change `siteUrl` in `src/config.js` to it and redeploy.
 
 The site is plain HTML, CSS and a little JavaScript, so it runs on any static host.
 
