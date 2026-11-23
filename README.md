@@ -89,7 +89,8 @@ All in `src/config.js`:
 To publish changes:
 1. `npm run build` and check it with `npm run dev`.
 2. `git add -A`, `git commit -m "what changed"`, `git push` to save the code on GitHub.
-3. `npx vercel@latest deploy --prod --yes` in this folder. Vercel runs `node scripts/build.js` itself (no packages to install), as set in `vercel.json`.
+3. That's it: GitHub and Vercel are connected, so every push to `main` is published automatically within about a minute. Vercel runs `node scripts/build.js` itself (no packages to install), as set in `vercel.json`. Check progress at vercel.com → leon-repair-shop → Deployments.
+   (Manual fallback without GitHub: `npx vercel@latest deploy --prod --yes` in this folder.)
 
 When the domain is connected in Vercel (Project → Settings → Domains), change `siteUrl` in `src/config.js` to it and redeploy.
 
